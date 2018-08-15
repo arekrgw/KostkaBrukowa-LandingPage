@@ -1,0 +1,21 @@
+{
+  "name": "kostkabrukowa",
+  "version": "1.0.0",
+  "description": "Landing page with slideshow in the background",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js"
+  },
+  "author": "Arkadiusz Pawlak",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.0"
+  }
+}

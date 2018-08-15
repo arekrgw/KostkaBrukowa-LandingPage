@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800|Raleway:300,400,700,900&subset=latin-ext');
+
+
+*{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    position: relative;
+    z-index: 4;
+}
+.header-content{
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-content h1 {
+    text-align: center;
+    font-size: 4.2em;
+    color: #fff;
+    font-weight: 400;
+    animation-delay: 0.5s;
+}
+.header-content button{
+    margin-top: 5em;
+    border: none;
+    border-bottom: 3px solid white;
+    padding: 0.5em;
+    color: white;
+    background: none;
+    font-size: 1.7em;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    animation-delay: 1.8s;
+    outline: none;
+    font-weight: 900;
+}
+.header-content button:hover{
+    background: white;
+    color: black;
+}
+.animation-none:hover{
+    animation: none;
+}
+.header-content p{
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    animation-delay: 1.5s;
+}
+.slideshow-root{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+}
+.slideshow-root::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    position: absolute;
+}
+.slideshow-root img{
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+}
+#slideshow-bottom{
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+#slideshow-top{
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+.fade-left{
+    animation: animation1 1.7s forwards ease-out;
+}
+
+.entry-animation{
+    animation: entry-animation 1s forwards ease-in;
+}
+
+@keyframes entry-animation{
+    0%{
+        transform: scale(5) translateY(10%)
+    }
+    100%{
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes animation1{
+    0%{
+        transform: translateX(100%) scale(1.6) translateY(-20%);
+        opacity: 0;
+        filter: blur(10px)
+    }
+    80%{
+        filter: blur(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0) scale(1) translateY(0);
+    }
+}
